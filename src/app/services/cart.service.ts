@@ -28,7 +28,7 @@ a:string[]
   //     })
   //   }
   // })
-  this.data.push({productID:1,name:"fefe",amount:10,description:"ayalarevivo",img:"../assets/1.jpg",isNew:true,price:10});
+  this.data.push({productID:1,name:"fefe",amount:10,description:"i love you",img:"../assets/1.jpg",isNew:true,price:10});
   this.data.push({productID:2,name:"fefe",amount:10,description:"csddf",img:"../assets/1.jpg",isNew:true,price:10});
 
   }
