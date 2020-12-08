@@ -14,6 +14,9 @@ a:string[]
   private cartItemCount = new BehaviorSubject(0);
   public baseURL="http://176.58.115.13:3000/products";
 
+
+
+
   constructor(public http:HttpClient,public userService:UserService) {
   //   this.a=this.userService.user.ShoppingCart.split(',');
   //   this.http.get<any>(this.baseURL).subscribe(data => {
@@ -25,7 +28,7 @@ a:string[]
   //     })
   //   }
   // })
-  this.data.push({productID:1,name:"fefe",amount:10,description:"csddf",img:"../assets/1.jpg",isNew:true,price:10});
+  this.data.push({productID:1,name:"fefe",amount:10,description:"aaa",img:"../assets/1.jpg",isNew:true,price:10});
   this.data.push({productID:2,name:"fefe",amount:10,description:"csddf",img:"../assets/1.jpg",isNew:true,price:10});
 
   }
