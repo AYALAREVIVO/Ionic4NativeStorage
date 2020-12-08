@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tfila</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- <ion-img  [src]="imgSRC" [title]="imgSRC"  width="100%" height="100%" ></ion-img> -->
+  <div *ngIf="item==1">
+    תפילת שחרית
+
+    סחךלבדכחדךצ
+    גצדלגחךדל
+    גצדלצגךד
+    גמדלגמלד
+    במדחמבלדמ
+    <div *ngIf="(date&&date.hm==0&&0 <= date.hd <= 10)">ה הוא האלוקים</div>
+    במדחמבלדמגלחמ
+    ביגדלחכחך
+    בצלךגדצדךף
+    צבסלדךגףצגךף
+    בגךדצגחךדצג
+    גצךדגףצדצג
+    צלגדךףףגצכדכףך
+    כצדךףכצףד
+    כצדךלףךלכצדף
+    <div *ngIf="(date&&date.hm==0&&0 <= date.hd <= 10)">זכרינו לחיים</div>
+
+    כצדךףכצצדףך
+    כצדלךףכצףד
+    צכדךףךצכףךד
+    <ng-container
+      *ngIf="(d1&&d2&&date&&((date.hm>d1.hm&&d2.hm>date.hm)||(date.hm==d1.hm&&date.hd >= d1.hd)||(date.hm==d2.hm&&date.hd <= d2.hd))); then mashiv; else morid">
+    </ng-container>
+
+    <ng-template #mashiv>
+      <div>
+        משיב הרוח ומוריד הגשם.
+      </div>
+    </ng-template>
+    <ng-template #morid>
+      <div>
+        מוריד הטל
+      </div>
+    </ng-template>
+
+
+    <div *ngIf="(date&&date.hm==0&&0 <= date.hd <= 10)">מי כמוך אב הרחמן</div>
+
+    <ng-container *ngIf="(date&&date.hm==0&&0 <= date.hd <= 10); then hamelech1; else noHamelech1">
+    </ng-container>
+
+    <ng-template #hamelech1>
+      המלך
+    </ng-template>
+    <ng-template #noHamelech1>
+      האל
+    </ng-template>
+    הקדוש
+    צכדלכצמףד
+    <div
+      *ngIf="(date.hm==0&&date.hd==10)||(date.hm==0&&date.hd==3)||(date.hm==11&&date.hd==17)||(date.hm==12&&date.hd==9)||((date.hm==6||date.hm==5||date.hm==7)&&date.hd==13)">
+      עננו</div>
+
+
+    <ng-container
+      *ngIf="(d3&&d4&&date&&((d3.hm<date.hm&&date.hm<d4.hm)||(date.hm==d3.hm&&date.hd >= d3.hd)||(date.hm==d4.hm&&date.hd <= d4.hd))); then barchalino; else bacheino">
+    </ng-container>
+
+    <ng-template #barchalino>
+      <div>
+        ברך עלינו
+      </div>
+    </ng-template>
+    <ng-template #bacheino>
+      <div>
+        ברכינו
+      </div>
+    </ng-template>
+    <ng-container *ngIf="(date&&date.hm==0&&0 <= date.hd <= 10); then hamelech; else noHamelech">
+    </ng-container>
+
+    <ng-template #hamelech>
+      המלך
+    </ng-template>
+    <ng-template #noHamelech>
+      האל
+    </ng-template>
+    המשפט
+
+    <div
+      *ngIf="(date.hd==1)||(date.hd==30)||(date.hm==0&&date.hd <= 22&&date.hd >= 15)||(date.hm==8&&date.hd <= 21&&date.hd >= 15)">
+      יעלה ויבוא</div>
+      <div *ngIf="((date.hm==2&&date.hd >=26)&&(date.hm==3&&date.hd <= 3))||((date.hm==6||date.hm==5||date.hm==7)&&(date.hd==14||date.hd==15))">
+        על הניסים</div>
+        <div *ngIf="now.getDay()==1||now.getDay()==4">
+          תחנון</div>
+  </div>
+  <div *ngIf="item==2">
+    תפילת מנחה</div>
+  <div *ngIf="item==3">
+    תפילת ערבית
+  </div>
+  <div *ngIf="item==4">
+    ברכת המזון
+  </div>
+  <div *ngIf="item==5">
+    תפילת הדרך
+  </div>
+
+</ion-content>

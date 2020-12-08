@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>timeToday</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 *ngIf="date!=null" class="center">{{date.hebrew}}</h1>
+
+  <h1 class="red">שים לב !</h1>
+  <div>
+    אסור להשתמש בזמנים אלו הלכה למעשה וצריך לקחת בחשבון סטיה אפשרית של כמה דקות 
+  </div>
+  <div class="red">לא לשכוח:</div>
+<ng-container *ngIf="(d1&&d2&&date&&((date.hm>d1.hm&&d2.hm>date.hm)||(date.hm==d1.hm&&date.hd>d1.hd)||(date.hm==d2.hm&&date.hd<d2.hd))); then mashiv; else morid">
+</ng-container>
+
+<ng-template #mashiv>
+  <div class="d "> 
+    משיב הרוח ומוריד הגשם.
+  </div>
+</ng-template>
+<ng-template #morid>
+  <div class="d ">
+    מוריד הטל
+  </div>
+</ng-template>
+<ng-container
+  *ngIf="(d3&&d4&&date&&((d3.hm<date.hm&&date.hm<d4.hm)||(date.hm==d3.hm&&date.hd>d3.hd)||(date.hm==d4.hm&&date.hd<d4.hd))); then barchalino; else bacheino">
+</ng-container>
+
+<ng-template #barchalino>
+  <div class="d ">
+    ברך עלינו
+  </div>
+</ng-template>
+<ng-template #bacheino>
+  <div  class="d ">
+    ברכינו
+  </div>
+</ng-template>
+<h1>זמני היום:</h1>
+
+<ion-row class="r">
+  <ion-col start class="s" >עלות השחר:</ion-col>
+  <ion-col end size="2">{{zmanim.alotHaShachar().getHours()}}:{{zmanim.alotHaShachar().getMinutes()}}</ion-col>
+  </ion-row>
+<div >משיכיר:{{zmanim.misheyakir().getHours()}}:{{zmanim.misheyakir().getMinutes()}}</div>
+<div >נץ החמה:{{zmanim.neitzHaChama().getHours()}}:{{zmanim.neitzHaChama().getMinutes()}}</div>
+<div >סוף זמן קריאת שמע:{{zmanim.sofZmanShma().getHours()}}:{{zmanim.sofZmanShma().getMinutes()}}</div>
+<div >סוף זמן תפילה:{{zmanim.sofZmanTfilla().getHours()}}:{{zmanim.sofZmanTfilla().getMinutes()}}</div>
+<div >חצות היום:{{zmanim.chatzot().getHours()}}:{{zmanim.chatzot().getMinutes()}}</div>
+<div >מנחה גדולה:{{zmanim.minchaGedola().getHours()}}:{{zmanim.minchaGedola().getMinutes()}}</div>
+<div >מנחה קטנה:{{zmanim.minchaKetana().getHours()}}:{{zmanim.minchaKetana().getMinutes()}}</div>
+<div >פלג המנחה:{{zmanim.plagHaMincha().getHours()}}:{{zmanim.plagHaMincha().getMinutes()}}</div>
+<div >שקיעה:{{zmanim.shkiah().getHours()}}:{{zmanim.shkiah().getMinutes()}}</div>
+<div >צאת הכוכבים:{{zmanim.tzeit([angle]).getHours()}}:{{zmanim.tzeit([angle]).getMinutes()}}</div>
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>new</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let i of newP;let i=index" >
+    <img [src]="i.img"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{i.name}}
+        </ion-card-title>
+      <p>
+        {{i.price}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

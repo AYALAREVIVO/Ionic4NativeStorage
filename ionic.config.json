@@ -1,0 +1,8 @@
+{
+  "name": "Ionic4NativeStorage",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
