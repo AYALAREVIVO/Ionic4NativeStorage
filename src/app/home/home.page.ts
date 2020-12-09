@@ -19,19 +19,8 @@ export class HomePage implements OnInit {
     // t.setTime();
 
   }
-aaa(){
+  goToStore(){
   this.router.navigateByUrl('store');
-
-  // alert("fd")
-  // this.sms.send('+9727130305', 'אבא אם קיבלת את ההודעה הזאת תתקשר אלי מהר ותגיד לי כי זה עובד ואין לי דרך אחרת לבדוק')
-  // .then(function() {
-  //   alert('Success');
-  //   // Success! SMS was sent
-  // }, function(error) {
-  //   alert('Error'+error);
-  //   // An error occurred
-  // });
-
 }
   async presentLoading() {
     const loading = await this.loadingController.create({
