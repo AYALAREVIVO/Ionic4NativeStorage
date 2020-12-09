@@ -38,21 +38,21 @@ export class StorePage implements OnInit {
   ngOnInit() {
 
   }
-  Hidden: boolean;
-  i = true;
-  hidden(p) {
-    let f = document.getElementById(p.productID);
-    let aaa = f.attributes.length;
-    let index = 0;
-    for (index = 0; index < aaa; index++) {
-      if (f.attributes[index].name == "hidden") {
-        break;
-      }
-    }
-    if (index < aaa && f.attributes[index].name == "hidden") { f.removeAttribute("hidden"); }
-    if (index == aaa)
-      f.setAttribute("hidden", "hidden");
-  }
+  // Hidden: boolean;
+  // i = true;
+  // hidden(p) {
+  //   let f = document.getElementById(p.productID);
+  //   let aaa = f.attributes.length;
+  //   let index = 0;
+  //   for (index = 0; index < aaa; index++) {
+  //     if (f.attributes[index].name == "hidden") {
+  //       break;
+  //     }
+  //   }
+  //   if (index < aaa && f.attributes[index].name == "hidden") { f.removeAttribute("hidden"); }
+  //   if (index == aaa)
+  //     f.setAttribute("hidden", "hidden");
+  // }
 
   aaa = 'https://www.stickdecor.co.il/files/products/image1_1697_2016-09-19_10-43-16.jpg';
   addToCart(product) {

@@ -51,8 +51,19 @@
 
   ion-card:hover{
     // margin: 1%;
-    ion-img{
-      opacity: 0.2;
+    opacity: 0.5;
+
+    ion-card-content{
+      ion-row{
+        ion-col{
+        ion-button,ion-label{
+        color:red;
+        font-size: large;
+        opacity: 1;
+        visibility: visible;
+          }
+        }
+      }
 
     }
   }
